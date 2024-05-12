@@ -1,4 +1,4 @@
-const { connection } = require('../database/connection');
+const { connection } = require('./database/connection');
 const express = require('express');
 const cors = require('cors');
 
@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true })) //
 
 
 //ROUTES
-const routes_article= require('../routes/article'); //defines de route path. Loads all the URL from ../routes/article
+const routes_article= require('./routes/article'); //defines de route path. Loads all the URL from ../routes/article
 app.use('/api', routes_article.router); //middleware function used in Express.js web frameworks to handle incoming form data submitted through the HTTP POST method
 
 
